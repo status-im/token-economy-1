@@ -252,16 +252,16 @@ class App extends Component {
           As stated previously, this particular use-case and work done the
           groundwork to build more complex models of the SNT use-cases. It also
           helps introduce the concept of how different variables affect growth
-          and impact over time.  If you plan to follow this series and work, we
-          suggest making sure you understand each step along the way because
-          all of this can get complicated fast. 
+          and impact over time. If you plan to follow this series and work, we
+          suggest making sure you understand each step along the way because all
+          of this can get complicated fast.
         </p>
         <p>
-          You have probably noticed that the default values for each variable
-          is not justified anywhere.  This is a problem that we plan to face 
-          by using historical data to make justified default values.  Right now,
-          we have a toolset to see what happens when we change variables, but not
-          <em> what those variables should be based in reality.</em>  These 
+          You have probably noticed that the default values for each variable is
+          not justified anywhere. This is a problem that we plan to face by
+          using historical data to make justified default values. Right now, we
+          have a toolset to see what happens when we change variables, but not
+          <em> what those variables should be based in reality.</em> These
           workbooks are living documents that will change over time to include
           such work.
         </p>
@@ -271,9 +271,8 @@ class App extends Component {
           not only around ENS usernames, but with the entire SNT ecosystem. This
           means we would love to get feedback from you, the community. If we
           have done something incorrectly, or you know of some way to better
-          model various aspects herein, please join the discussion. We will
-          be posting all of these articles in [DISCUSS WHERE WE WANT THIS TO
-          LIVE].
+          model various aspects herein, please join the discussion. We will be
+          posting all of these articles in [DISCUSS WHERE WE WANT THIS TO LIVE].
         </p>
         <h3>Future Improvements</h3>
         <ul>
