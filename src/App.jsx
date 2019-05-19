@@ -233,7 +233,12 @@ class App extends Component {
         <p>
           Having the amount of SNT locked up is quite useful by itself. From
           there, we can look at the circulating supply and see how this use-case
-          reflects that
+          affects its availability. It is also interesting to see how this maps
+          to real world assets by look at the current price of SNT in US Dollars
+          (USD). Since most evaluation mechanism use a market capitalization
+          (cap) metric to compare different networks and tokens, mapping each
+          use-case , and eventually the whole network, allows us to see how much
+          they contribute to a given market cap.
         </p>
         <div ref={this.sntPriceRef} />
         <div ref={this.lockedUsdBarRef} />
@@ -243,12 +248,39 @@ class App extends Component {
           to better fit reality? Are their any actionable conclusions around ENS
           usernames that come from this information?
         </p>
+        <p>
+          As stated previously, this particular use-case and work done the
+          groundwork to build more complex models of the SNT use-cases. It also
+          helps introduce the concept of how different variables affect growth
+          and impact over time.  If you plan to follow this series and work, we
+          suggest making sure you understand each step along the way because
+          all of this can get complicated fast. 
+        </p>
+        <p>
+          You have probably noticed that the default values for each variable
+          is not justified anywhere.  This is a problem that we plan to face 
+          by using historical data to make justified default values.  Right now,
+          we have a toolset to see what happens when we change variables, but not
+          <em> what those variables should be based in reality.</em>  These 
+          workbooks are living documents that will change over time to include
+          such work.
+        </p>
+        <h3>Call to Action</h3>
+        <p>
+          Our goal is to continuously improve these methods and create more work
+          not only around ENS usernames, but with the entire SNT ecosystem. This
+          means we would love to get feedback from you, the community. If we
+          have done something incorrectly, or you know of some way to better
+          model various aspects herein, please join the discussion. We will
+          be posting all of these articles in [DISCUSS WHERE WE WANT THIS TO
+          LIVE].
+        </p>
         <h3>Future Improvements</h3>
         <ul>
           <li>discounted value rate</li>
           <li>probability of failure</li>
           <li>justifications using historical data</li>
-          <li>assign variables and create eqations for each</li>
+          <li>assign variables and create equations for each</li>
         </ul>
       </div>
     );
