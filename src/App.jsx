@@ -231,8 +231,9 @@ class App extends Component {
         <div ref={this.lockedSntBarRef} />
         <h3>How to assign value to all of this?</h3>
         <p>
-          Having the amount of SNT locked up is quite useful by itself.  From there,
-          we can look at the circulating supply and see how this use-case reflects that
+          Having the amount of SNT locked up is quite useful by itself. From
+          there, we can look at the circulating supply and see how this use-case
+          reflects that
         </p>
         <div ref={this.sntPriceRef} />
         <div ref={this.lockedUsdBarRef} />
