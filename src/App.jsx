@@ -75,8 +75,8 @@ class App extends Component {
         <p>
           The Status Network has a utility token, the Status Network Token
           (SNT). What does that even mean? What utilities does it have and how
-          do their uses affect the rest of the ecosystem? Does it have an impact
-          on valuation? What even is valuation of a utility token?
+          do their uses affect the rest of the ecosystem? Does it impact value?
+          What even is the value of a utility token?
         </p>
         <p>
           These questions are hard, and there does not seem to be sufficient
@@ -89,13 +89,12 @@ class App extends Component {
         </p>
         <p>
           There is currently quite a bit of work being done in this field, but
-          it is mostly for investment firms to make appropriate calls on buying,
-          selling, and holding various project’s tokens. While this is
-          drastically important for growth and project funding, we at Status
-          feel that there are other, less financially motivated reasons to do
-          this work which require a different approach. More specifically, any
-          utility token needs to be able to objectively evaluate various
-          features and utilities of their platform, and how they affect the
+          it is mostly for investment firms to make appropriate capital allocation
+          decisions among a diversified portfolio of cryptoassets. While this is
+          drastically important for growth and project funding, there is great lack
+          of research on capital and resource allocation inside of a single network.
+          More specifically, any utility token needs to be able to objectively evaluate
+          various features and utilities of their platform, and how they affect the
           entirety of their ecosystem. For instance, we need to be able to ask
           questions like the following: “How can we objectively measure the use
           of SNT if it gets used in feature X as a function of our user base?
@@ -116,7 +115,7 @@ class App extends Component {
           </ul>
         </p>
         <p>
-          Each of these use-cases are run by the SNT token, but in very
+          Each of these use-cases make use of the SNT token, but in very
           different ways. This means each will have differing effects on the
           supply and demand of the token itself. It doesn’t stop there, as
           Status is an open and permissionless platform for developers to build
@@ -127,9 +126,9 @@ class App extends Component {
         <p>
           To this end, we would like to start a blog series detailing some of
           the research we are doing within Status to objectively evaluate the
-          flow of SNT, the potential effects of our implemented (and upcoming)
+          value flows of SNT, the potential effects of our implemented (and upcoming)
           SNT use cases within Status, and how our potential user growth changes
-          things. This work will encompass traditional economic and portfolio
+          things. This work will encompass traditional economic and finance
           theory, work currently being done in crypto-economics, and novel
           methodology. That means a part of this endeavor is an attempt to get
           peer review and evaluation of what we do by you, the community!
@@ -160,7 +159,7 @@ class App extends Component {
         </p>
         <p>
           The use case and token flow are both relatively simple, but what are
-          the effects on the ecosystem? Let’s first try and model what value
+          the effects on the network? Let’s first try and model what value
           this could potentially accrue over time. We can start by picking out
           the variables in this process to see how things depend on each other.
           Furthermore, the above values are what we currently use, but in terms
@@ -174,7 +173,7 @@ class App extends Component {
           It is clear that this all depends on how many users Status has in the
           app. If they are not using Status, then they won’t use the feature.
           This is our base metric, and we will model it using compounding growth
-          and loss. We can start with a number of users that are using the app,
+          and loss. We can start with a number of users that are using the network,
           and set additional growth and loss variables (in percentages) that
           define how this number changes over the next 10 years. This means that
           every year, we expect a certain percentage change in users based on
@@ -234,11 +233,14 @@ class App extends Component {
           Having the amount of SNT locked up is quite useful by itself. From
           there, we can look at the circulating supply and see how this use-case
           affects its availability. It is also interesting to see how this maps
-          to real world assets by look at the current price of SNT in US Dollars
+          to more traditional assets by looking at the current price of SNT in US Dollars
           (USD). Since most evaluation mechanism use a market capitalization
           (cap) metric to compare different networks and tokens, mapping each
           use-case , and eventually the whole network, allows us to see how much
-          they contribute to a given market cap.
+          they contribute to a given market cap. By converting value flows to USD
+          we can also make use of established measures by which to discount future
+          value flows (10-year US Treasury rate) which are currently non-existant
+          among crypto assets.
         </p>
         <div ref={this.sntPriceRef} />
         <div ref={this.lockedUsdBarRef} />
@@ -249,7 +251,7 @@ class App extends Component {
           usernames that come from this information?
         </p>
         <p>
-          As stated previously, this particular use-case and work done the
+          As stated previously, this particular use-case and work done lay the
           groundwork to build more complex models of the SNT use-cases. It also
           helps introduce the concept of how different variables affect growth
           and impact over time. If you plan to follow this series and work, we
