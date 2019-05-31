@@ -1,0 +1,331 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190530.200259.10397.0.001.json",
+    "dumpEventTime": "2019-05-30T20:02:59Z",
+    "dumpEventTimeStamp": "1559260979865",
+    "processId": 10397,
+    "cwd": "/home/petty/Github/status-im/token-economy-1",
+    "commandLine": [
+      "node",
+      "/home/petty/Github/status-im/token-economy-1/node_modules/.bin/eslint",
+      "--fix",
+      "/home/petty/Github/status-im/token-economy-1/src/App.jsx",
+      "/home/petty/Github/status-im/token-economy-1/src/App.css",
+      "/home/petty/Github/status-im/token-economy-1/build/js/vendors.640951b04ffd2402a5eb.js",
+      "/home/petty/Github/status-im/token-economy-1/build/js/runtime~main.d26192c48fdcce4d50bb.js",
+      "/home/petty/Github/status-im/token-economy-1/build/js/main.5e2e15d48fe1364e50b0.js",
+      "/home/petty/Github/status-im/token-economy-1/build/css/main.css"
+    ],
+    "nodejsVersion": "v11.14.0",
+    "glibcVersionRuntime": "2.29",
+    "glibcVersionCompiler": "2.28",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "11.14.0",
+      "v8": "7.0.276.38-node.18",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.36.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "35.1",
+      "icu": "64.1",
+      "tz": "2019a",
+      "unicode": "12.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.14.0/node-v11.14.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.14.0/node-v11.14.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.0.9-arch1-1-ARCH",
+    "osVersion": "#1 SMP PREEMPT Sat Apr 20 15:00:46 UTC 2019",
+    "osMachine": "x86_64",
+    "host": "bean"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000555cfd180211",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, v8::Local<v8::String>) [node]"
+    },
+    {
+      "pc": "0x0000555cfd07174f",
+      "symbol": "node::OnFatalError(char const*, char const*) [node]"
+    },
+    {
+      "pc": "0x0000555cfd20b7b2",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000555cfd20ba0b",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000555cfd5a37d3",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000555cfd5a3914",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000555cfd5b34c6",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000555cfd5b3e6e",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000555cfd5b606d",
+      "symbol": "v8::internal::Heap::AllocateRawWithLightRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000555cfd5b60c2",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000555cfd584a05",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [node]"
+    },
+    {
+      "pc": "0x0000555cfd7f33ff",
+      "symbol": "v8::internal::Runtime_AllocateInTargetSpace(int, v8::internal::Object**, v8::internal::Isolate*) [node]"
+    },
+    {
+      "pc": "0x000009e05244fc5d",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1350656000,
+    "totalCommittedMemory": 1346619640,
+    "usedMemory": 1295669064,
+    "availableMemory": 180235680,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 42224,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 921128,
+        "capacity": 1031168,
+        "used": 234848,
+        "available": 796320
+      },
+      "old_space": {
+        "memorySize": 1213927424,
+        "committedMemory": 1211969600,
+        "capacity": 1170317992,
+        "used": 1167422648,
+        "available": 2895344
+      },
+      "code_space": {
+        "memorySize": 6815744,
+        "committedMemory": 6395936,
+        "capacity": 5857536,
+        "used": 5857536,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 4730880,
+        "committedMemory": 4730240,
+        "capacity": 1545360,
+        "used": 1545360,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 122560512,
+        "committedMemory": 122560512,
+        "capacity": 296637104,
+        "used": 120575152,
+        "available": 176061952
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 198.134,
+    "kernelCpuSeconds": 6.35618,
+    "cpuConsumptionPercent": 189.343,
+    "maxRss": 1552519168,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 3314125
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 102.341,
+    "kernelCpuSeconds": 3.47489,
+    "cpuConsumptionPercent": 97.9777,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "SHELL": "/bin/zsh",
+    "XDG_SESSION_PATH": "/org/freedesktop/DisplayManager/Session0",
+    "VSCODE_GIT_ASKPASS_HANDLE": "/run/user/1000/vscode-git-askpass-71794351e1d694e719a4f923bbb206e5bc0a2b31.sock",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "VSCODE_LOG_STACK": "false",
+    "VSCODE_LOGS": "/home/petty/.config/Code - OSS/logs/20190530T142636",
+    "ELECTRON_RUN_AS_NODE": "1",
+    "DESKTOP_SESSION": "i3-with-shmlog",
+    "EDITOR": "/usr/bin/nano",
+    "GTK_MODULES": "canberra-gtk-module",
+    "GIT_INDEX_FILE": "/home/petty/Github/status-im/token-economy-1/.git/index.lock",
+    "XDG_SEAT": "seat0",
+    "PWD": "/home/petty/Github/status-im/token-economy-1",
+    "XDG_SESSION_DESKTOP": "i3-with-shmlog",
+    "LOGNAME": "petty",
+    "QT_QPA_PLATFORMTHEME": "qt5ct",
+    "XDG_SESSION_TYPE": "x11",
+    "_": "/home/petty/Github/status-im/token-economy-1/node_modules/.bin/lint-staged",
+    "XAUTHORITY": "/home/petty/.Xauthority",
+    "VSCODE_GIT_ASKPASS_NODE": "/usr/lib/electron/electron",
+    "GIT_AUTHOR_DATE": "@1559260867 -0400",
+    "XDG_GREETER_DATA_DIR": "/var/lib/lightdm-data/petty",
+    "VSCODE_PREVENT_FOREIGN_INSPECT": "true",
+    "GIT_EXEC_PATH": "/usr/lib/git-core",
+    "HOME": "/home/petty",
+    "LANG": "en_US.UTF-8",
+    "VSCODE_IPC_HOOK_EXTHOST": "/tmp/vscode-ipc-32c67fb1-578a-4ff5-80b3-72c275e99bcc.sock",
+    "VSCODE_IPC_HOOK": "/run/user/1000/vscode-ab2990ac-1.33.1-main.sock",
+    "VSCODE_CLI": "1",
+    "GIT_ASKPASS": "/usr/lib/code/extensions/git/dist/askpass.sh",
+    "XDG_SEAT_PATH": "/org/freedesktop/DisplayManager/Seat0",
+    "GIT_AUTHOR_EMAIL": "corey@status.im",
+    "GIT_PREFIX": "",
+    "XDG_SESSION_CLASS": "user",
+    "USER": "petty",
+    "AMD_ENTRYPOINT": "vs/workbench/services/extensions/node/extensionHostProcess",
+    "VSCODE_GIT_COMMAND": "commit",
+    "DISPLAY": ":0",
+    "SHLVL": "2",
+    "GIT_EDITOR": ":",
+    "XDG_VTNR": "7",
+    "XDG_SESSION_ID": "2",
+    "MOZ_PLUGIN_PATH": "/usr/lib/mozilla/plugins",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "VERBOSE_LOGGING": "true",
+    "LC_ALL": "en_US.UTF-8",
+    "ELECTRON_NO_ATTACH_CONSOLE": "1",
+    "VSCODE_GIT_ASKPASS_MAIN": "/usr/lib/code/extensions/git/dist/askpass-main.js",
+    "LC_COLLATE": "en_US.UTF-8",
+    "GIT_AUTHOR_NAME": "Corey Petty",
+    "BROWSER": "/usr/bin/chromium",
+    "PATH": "/home/petty/Github/status-im/token-economy-1/node_modules/.bin:/home/petty/Github/status-im/node_modules/.bin:/home/petty/Github/node_modules/.bin:/home/petty/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/bin:/home/petty/Github/status-im/token-economy-1/node_modules/.bin:/home/petty/Github/status-im/node_modules/.bin:/home/petty/Github/node_modules/.bin:/home/petty/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/usr/bin:/usr/lib/git-core:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl",
+    "PIPE_LOGGING": "true",
+    "GDMSESSION": "i3-with-shmlog",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "VSCODE_NLS_CONFIG": "{\"locale\":\"en-us\",\"availableLanguages\":{},\"_languagePackSupport\":true}",
+    "MAIL": "/var/spool/mail/petty",
+    "VSCODE_HANDLES_UNCAUGHT_ERRORS": "true"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 524288,
+      "hard": 524288
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 128362,
+      "hard": 128362
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/usr/lib/libz.so.1",
+    "/usr/lib/libuv.so.1",
+    "/usr/lib/libcares.so.2",
+    "/usr/lib/libnghttp2.so.14",
+    "/usr/lib/libcrypto.so.1.1",
+    "/usr/lib/libssl.so.1.1",
+    "/usr/lib/libicui18n.so.64",
+    "/usr/lib/libicuuc.so.64",
+    "/usr/lib/libdl.so.2",
+    "/usr/lib/librt.so.1",
+    "/usr/lib/libstdc++.so.6",
+    "/usr/lib/libm.so.6",
+    "/usr/lib/libgcc_s.so.1",
+    "/usr/lib/libpthread.so.0",
+    "/usr/lib/libc.so.6",
+    "/usr/lib/libnsl.so.2",
+    "/usr/lib/libicudata.so.64",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/usr/lib/libtirpc.so.3",
+    "/usr/lib/libgssapi_krb5.so.2",
+    "/usr/lib/libkrb5.so.3",
+    "/usr/lib/libk5crypto.so.3",
+    "/usr/lib/libcom_err.so.2",
+    "/usr/lib/libkrb5support.so.0",
+    "/usr/lib/libkeyutils.so.1",
+    "/usr/lib/libresolv.so.2"
+  ]
+}

@@ -80,25 +80,26 @@ class App extends Component {
         </p>
         <p>
           These questions are hard, and there does not seem to be sufficient
-          academic answers to them, for very good reasons. The technology
-          enabling a “utility token” is new, and transcendent of many older
-          technologies. This consequently means the models used to evaluate the
-          older technologies will never be able to completely describe the newer
-          ones. We, as a community, need to build new ones and evaluate them
-          rigorously.
+          academic answers to them. The technology enabling a “utility token” is
+          new, and transcendent of many older technologies. This consequently
+          means the models used to evaluate the older technologies will never be
+          able to completely describe the newer ones. We, as a community, need
+          to build new ones and evaluate them rigorously.
         </p>
         <p>
           There is currently quite a bit of work being done in this field, but
           it is mostly for investment firms to make appropriate capital
           allocation decisions among a diversified portfolio of cryptoassets.
           While this is drastically important for growth and project funding,
-          there is great lack of research on capital and resource allocation
-          inside of a single network. More specifically, any utility token needs
-          to be able to objectively evaluate various features and utilities of
-          their platform, and how they affect the entirety of their ecosystem.
-          For instance, we need to be able to ask questions like the following:
-          “How can we objectively measure the difference in the rate users use
-          feature X in Status and its respective impact on the ecosystem?”
+          there is a lack of research on capital and resource allocation inside
+          of a single network. More specifically, any utility token needs to be
+          able to objectively evaluate various features and utilities of their
+          platform, and how they affect their ecosystem. For instance, we need
+          to be able to ask questions like:
+          <em>
+            “How can we objectively measure the difference in the rate users use
+            feature X in Status and its respective impact on the ecosystem?”
+          </em>
         </p>
         <p>
           We will be launching Status with the following SNT use-cases, as
@@ -111,14 +112,14 @@ class App extends Component {
             <li>ENS Usernames</li>
             <li>Sticker Market</li>
             <li>SNT Curated Dapp Store</li>
-            <li>Network Incentivization (may not be available at launch)</li>
-            <li>Liquid Funding (may not be avaialble at launch)</li>
-            <li>User Acquisition Engine (will not be available at launch)</li>
+            <li>Liquid Funding (may not be available at launch)</li>
+            <li>Network Incentivization (launching after V1)</li>
+            <li>User Acquisition Engine (launching after V1)</li>
           </ul>
         </p>
         <p>
-          Each of these use-cases leverage the SNT token, but in very different
-          ways. For instance, some will lock up large amounts, some will
+          Each of these features leverage the SNT token, but in very different
+          ways. For instance, some features will require staking, some will
           actually burn the token, and some will incentivize sending and
           receiving. This means each will have differing effects on the supply
           and demand of the token itself, and will need to be modeled
@@ -129,14 +130,14 @@ class App extends Component {
           do we go to try and evaluate its usefulness?
         </p>
         <p>
-          To this end, we would like to start a blog series detailing some of
-          the research we are doing within Status to objectively evaluate the
-          value flows of SNT, the potential effects of our implemented (and
-          upcoming) SNT use cases within Status, and how our potential user
-          growth changes things. This work will encompass traditional economic
-          and finance theory, work currently being done in crypto-economics, and
-          novel methodology. That means a part of this endeavor is an attempt to
-          get peer review and evaluation of what we do by you, the community!
+          To this end, we are starting a blog series detailing some of the
+          research we are doing within Status to objectively evaluate the value
+          flows of SNT, the potential effects of our implemented (and upcoming)
+          SNT use cases within Status, and how our potential user growth impacts
+          SNT. This work will encompass traditional economic and finance theory,
+          work currently being done in crypto-economics, and novel methodology.
+          That means a part of this endeavor is an attempt to get peer review
+          and evaluation of what we do by you, the community!
         </p>
         <p>
           <b>
@@ -218,7 +219,7 @@ class App extends Component {
           manually release their SNT from the ENS username contract, it can be
           considered locked forever. For this, we will continue to consider them
           users because from the contract&apos;s perspective, they are
-          indestiguishable. We’ll model the people who release their username
+          indistinguishable. We’ll model the people who release their username
           with another conversion factor. Go ahead and change these variables
           and see how the following graph changes.
         </p>
@@ -263,24 +264,27 @@ class App extends Component {
           use to figure out how much present value a known future cash flow is
           worth. In other words, how to presently evaluate the amount of money
           you know will come in the future. Once you have the discount rate, you
-          can calculate the <em>Net Present Value</em>, which is given by the
-          following formula:
+          can calculate the <em>Net Present Value</em> (NPV), which is given by
+          the following formula:
         </p>
         <p>
           <Latex displayMode>
-            {
-              '$$NPV = \\sum^n_{t=1} \\frac{R_t}{(1+i)^t} - \\text{initial cost}$$'
-            }
+            {'$$NPV = \\sum^n_{t=1} \\frac{R_t}{(1+i)^t}$$'}
           </Latex>
         </p>
         <p>
           where <Latex>$$t$$</Latex> is the number of time periods (10 in this
           article),
           <Latex>$$R_t$$</Latex>
-          is the cashflow of that particular time period , and{' '}
-          <Latex>$$i$$</Latex> is the discount rate. The concept of discounting
-          future value has been around for along time. The earliest known
-          reference was in the 6th century BCE{' '}
+          is the net cashflow of that particular time period , and{' '}
+          <Latex>$$i$$</Latex> is the discount rate. There is also a potential
+          for including the initial cost (<Latex>$$t=0$$</Latex>) of the
+          project. We are purposely not including this as Status absorbs the
+          investment cost for the network. There are quite a few subtle
+          arguments here around things like hurdle rates, payback periods, etc,
+          but we defer them and their potential utility to a future article.
+          Anyway, the concept of discounting future value has been around for a
+          long time. The earliest known reference was in the 6th century BCE{' '}
           <a href="http://www.aramaic-dem.org/English/History/The%20proverbs%20of%20the%20Aramean%20Ahikar.pdf">
             Proverbs of Ahiqar
           </a>
@@ -310,8 +314,10 @@ class App extends Component {
         <div ref={this.discountRateRef} />
         <div ref={this.lockedUsdBarRef} />
         <p>
-          and all of this gets summed together to give you the following Net
-          Present Value of ENS Usernames within Status:
+          and all of this gets summed together to give you the NPV of ENS
+          Usernames within Status. To be more explicit, the NPV is the present
+          value of something based on a projection into the future. Based on the
+          values chosen above, we arrive at an NPV of:
         </p>
         <div className="slide">
           <div ref={this.netPresentUtilityRef} />
@@ -322,7 +328,7 @@ class App extends Component {
           usernames are in a single value. This value will become more useful as
           we build out other models for other use cases so we can compare them
           and see relative differences. Eventually, we will be able to see the
-          relatively impact a given utility within Status has within the entire
+          relative impact a given utility within Status has within the entire
           ecosystem.
         </p>
         <h2>Example Scenario Analysis</h2>
@@ -330,27 +336,26 @@ class App extends Component {
           It is also useful to look at how this number changes as we tweak the
           input variables to see their impact. As an example, let&apos;s look at
           what happens if we are able to do something to increase the number
-          Status users who actualy register an ENS username (actually currently
-          in the works). This is an example of the question we postuated in the
+          Status users who actually register an ENS username (actually currently
+          in the works). This is an example of the question we postulated in the
           beginning of this article. The default value is 50%, which leads to a
-          Net Present Utility Value of $8,527,197.00 (holding all default values
-          constant).
+          NPV of $8,577,197.00 (holding all default values constant).
         </p>
         <p>
           What happens if we&apos;re able to increase this number, say, to 75%?
-          Keeping all other variables equal, this change alone changes the Net
-          Present Utility Value to $12,815,797.00, which is a 50.3% growth and
-          would constitute a linear relationship.
+          Keeping all other variables equal, this change alone changes the NPV
+          to $12,865,797.00, which is a 50.3% growth and would constitute a
+          linear relationship.
         </p>
         <p>
           As another example, let&apos;s look at what happens if we increase our
-          yearly growth rate, going from 300% per year to 350% per year. holding
+          yearly growth rate, going from 300% per year to 350% per year. Holding
           everything else constant, with a 350% growth rate per year, we come to
-          Net Present Utility Value of $24,157,021.00, a 183% growth and would
-          constitue a superlinear relatinoship due to the effects of compounding
-          growth. Based on these two simple examples, it is clear we should
-          spend more time on user acquisition and continuious growth over
-          increasing ENS username conversion rates (OR BOTH!).
+          NPV of $24,207,021.00 which is a 183% growth and would constitute a
+          superlinear relationship due to the effects of compounding growth.
+          Based on these two simple examples, it is clear we should spend more
+          time on user acquisition and continuous growth over increasing ENS
+          username conversion rates (OR BOTH!).
         </p>
         <p>
           As you can see, by making models of our SNT use-cases, we can start to
@@ -372,7 +377,9 @@ class App extends Component {
           helps introduce the concept of how different variables affect growth
           and impact over time. If you plan to follow this series and work, we
           suggest making sure you understand each step along the way because all
-          of this can get complicated fast.
+          of this can get complicated fast. At the very least, we hope you have
+          been able to grasp a little of what goes on behind the scenes at
+          Status.
         </p>
         <p>
           You have probably noticed that the default values for each variable is
@@ -394,11 +401,13 @@ class App extends Component {
           <a href="https://discuss.status.im">our discuss</a> and linking around
           the internet in relevant places.
         </p>
-        <h3>Future Improvements</h3>
+        <h3>Future Improvements and Articles</h3>
         <ul>
           <li>probability of failure</li>
           <li>justifications using historical data</li>
           <li>assign variables and create equations for each</li>
+          <li>discussion around initial cost, hurdle rates, payback periods</li>
+          <li />
         </ul>
       </div>
     );
