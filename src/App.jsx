@@ -105,7 +105,7 @@ class App extends Component {
           We will be launching Status with the following SNT use-cases, as
           described in the{' '}
           <a href="https://status.im/whitepaper.pdf">whitepaper</a> and{' '}
-          <a href="https://www.status.im">the website</a>:
+          <a href="https://status.im/snt-utility/">the website</a>:
           <ul>
             <li>Teller Network</li>
             <li>Tribute to Talk</li>
@@ -339,19 +339,18 @@ class App extends Component {
           Status users who actually register an ENS username (actually currently
           in the works). This is an example of the question we postulated in the
           beginning of this article. The default value is 50%, which leads to a
-          NPV of $8,577,197.00 (holding all default values constant).
+          NPV of $45,745,047.00 (holding all default values constant).
         </p>
         <p>
           What happens if we&apos;re able to increase this number, say, to 75%?
           Keeping all other variables equal, this change alone changes the NPV
-          to $12,865,797.00, which is a 50.3% growth and would constitute a
-          linear relationship.
+          to $74,335,701.00, which is a 62.5% increase.
         </p>
         <p>
           As another example, let&apos;s look at what happens if we increase our
           yearly growth rate, going from 300% per year to 350% per year. Holding
           everything else constant, with a 350% growth rate per year, we come to
-          NPV of $24,207,021.00 which is a 183% growth and would constitute a
+          NPV of $129,104,065.00 which is a 182.2% growth and would constitute a
           superlinear relationship due to the effects of compounding growth.
           Based on these two simple examples, it is clear we should spend more
           time on user acquisition and continuous growth over increasing ENS
@@ -401,13 +400,41 @@ class App extends Component {
           <a href="https://discuss.status.im">our discuss</a> and linking around
           the internet in relevant places.
         </p>
+        <p>
+          If you are interested in the models created here and want to see more
+          detail, please see the more detailed notebooks on{' '}
+          <a href="https://observablehq.com">ObservableHQ</a>. There, you can
+          play, edit, and fork the notebooks for your own use cases. We would
+          love to hear your feedback!
+          <ul>
+            <li>
+              <a href="https://observablehq.com/@bgits/status-ens-usernames-utility-value-exploration">
+                ENS Usernames
+              </a>
+            </li>
+            <li>
+              <a href="https://observablehq.com/@bgits/status-cost-of-capital?collection=@bgits/status">
+                Status Cost of Capital
+              </a>
+            </li>
+            <li>
+              Join the conversation in Status at{' '}
+              <a href="https://get.status.im/chat/public/token-economics">
+                #token-economics
+              </a>
+            </li>
+            <li>
+              Learn more about SNT and the various use cases{' '}
+              <a href="https://status.im/snt-utility/">here</a>
+            </li>
+          </ul>
+        </p>
         <h3>Future Improvements and Articles</h3>
         <ul>
           <li>probability of failure</li>
           <li>justifications using historical data</li>
           <li>assign variables and create equations for each</li>
           <li>discussion around initial cost, hurdle rates, payback periods</li>
-          <li />
         </ul>
       </div>
     );
